@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFBF641F1BD5244800725102 /* AcidSSView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBF641E1BD5244800725102 /* AcidSSView.h */; };
+		CFBF64211BD5244800725102 /* AcidSSView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBF64201BD5244800725102 /* AcidSSView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CFBF641B1BD5244800725102 /* AcidSS.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcidSS.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBF641E1BD5244800725102 /* AcidSSView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcidSSView.h; sourceTree = "<group>"; };
+		CFBF64201BD5244800725102 /* AcidSSView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcidSSView.m; sourceTree = "<group>"; };
+		CFBF64221BD5244800725102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFBF64171BD5244800725102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFBF64111BD5244800725102 = {
+			isa = PBXGroup;
+			children = (
+				CFBF641D1BD5244800725102 /* AcidSS */,
+				CFBF641C1BD5244800725102 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFBF641C1BD5244800725102 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFBF641B1BD5244800725102 /* AcidSS.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFBF641D1BD5244800725102 /* AcidSS */ = {
+			isa = PBXGroup;
+			children = (
+				CFBF641E1BD5244800725102 /* AcidSSView.h */,
+				CFBF64201BD5244800725102 /* AcidSSView.m */,
+				CFBF64221BD5244800725102 /* Info.plist */,
+			);
+			path = AcidSS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CFBF64181BD5244800725102 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFBF641F1BD5244800725102 /* AcidSSView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CFBF641A1BD5244800725102 /* AcidSS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFBF64251BD5244800725102 /* Build configuration list for PBXNativeTarget "AcidSS" */;
+			buildPhases = (
+				CFBF64161BD5244800725102 /* Sources */,
+				CFBF64171BD5244800725102 /* Frameworks */,
+				CFBF64181BD5244800725102 /* Headers */,
+				CFBF64191BD5244800725102 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcidSS;
+			productName = AcidSS;
+			productReference = CFBF641B1BD5244800725102 /* AcidSS.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFBF64121BD5244800725102 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Ilya Solovyov";
+				TargetAttributes = {
+					CFBF641A1BD5244800725102 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = CFBF64151BD5244800725102 /* Build configuration list for PBXProject "AcidSS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFBF64111BD5244800725102;
+			productRefGroup = CFBF641C1BD5244800725102 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFBF641A1BD5244800725102 /* AcidSS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFBF64191BD5244800725102 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFBF64161BD5244800725102 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFBF64211BD5244800725102 /* AcidSSView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CFBF64231BD5244800725102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CFBF64241BD5244800725102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CFBF64261BD5244800725102 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AcidSS/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_BUNDLE_IDENTIFIER = something.AcidSS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		CFBF64271BD5244800725102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AcidSS/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_BUNDLE_IDENTIFIER = something.AcidSS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFBF64151BD5244800725102 /* Build configuration list for PBXProject "AcidSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFBF64231BD5244800725102 /* Debug */,
+				CFBF64241BD5244800725102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFBF64251BD5244800725102 /* Build configuration list for PBXNativeTarget "AcidSS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFBF64261BD5244800725102 /* Debug */,
+				CFBF64271BD5244800725102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFBF64121BD5244800725102 /* Project object */;
+}

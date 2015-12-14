@@ -1,13 +1,14 @@
-//
-//  AcidSSView.h
-//  AcidSS
-//
-//  Created by Ilya Solovyov on 19/10/15.
-//  Copyright © 2015 Ilya Solovyov. All rights reserved.
-//
-
 #import <ScreenSaver/ScreenSaver.h>
+#import <OpenGL/gl.h>
+#import <OpenGL/glu.h>
+#import "MyOpenGLView.h"
+#import "program.h"
+#import "OpenGLRenderer.h"
 
 @interface AcidSSView : ScreenSaverView
+{
+    MyOpenGLView *glView;
+    GLfloat rotation;
+}
 
 @end

@@ -7,15 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFA391F91BD55C6700CC119F /* OpenGLRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA391F71BD55C6700CC119F /* OpenGLRenderer.h */; settings = {ASSET_TAGS = (); }; };
+		CFA391FA1BD55C6700CC119F /* OpenGLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFA391F81BD55C6700CC119F /* OpenGLRenderer.mm */; settings = {ASSET_TAGS = (); }; };
+		CFA391FC1BD55E4D00CC119F /* glUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA391FB1BD55E4D00CC119F /* glUtil.h */; settings = {ASSET_TAGS = (); }; };
 		CFBF641F1BD5244800725102 /* AcidSSView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBF641E1BD5244800725102 /* AcidSSView.h */; };
-		CFBF64211BD5244800725102 /* AcidSSView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBF64201BD5244800725102 /* AcidSSView.m */; };
+		CFBF64211BD5244800725102 /* AcidSSView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFBF64201BD5244800725102 /* AcidSSView.mm */; };
+		CFBF64291BD5288800725102 /* AcidSS.saver in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFBF641B1BD5244800725102 /* AcidSS.saver */; };
+		CFBF64301BD552C200725102 /* MyOpenGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBF642C1BD552C200725102 /* MyOpenGLView.h */; settings = {ASSET_TAGS = (); }; };
+		CFBF64311BD552C200725102 /* MyOpenGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = CFBF642D1BD552C200725102 /* MyOpenGLView.mm */; settings = {ASSET_TAGS = (); }; };
+		CFBF64331BD554F500725102 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBF64321BD554F500725102 /* OpenGL.framework */; };
+		CFBF643A1BD5587300725102 /* generator.frag in Resources */ = {isa = PBXBuildFile; fileRef = CFBF64341BD5587300725102 /* generator.frag */; settings = {ASSET_TAGS = (); }; };
+		CFBF643B1BD5587300725102 /* plain.vert in Resources */ = {isa = PBXBuildFile; fileRef = CFBF64351BD5587300725102 /* plain.vert */; settings = {ASSET_TAGS = (); }; };
+		CFBF643C1BD5587300725102 /* program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFBF64361BD5587300725102 /* program.cpp */; settings = {ASSET_TAGS = (); }; };
+		CFBF643D1BD5587300725102 /* program.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBF64371BD5587300725102 /* program.h */; settings = {ASSET_TAGS = (); }; };
+		CFBF643E1BD5587300725102 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFBF64381BD5587300725102 /* shader.cpp */; settings = {ASSET_TAGS = (); }; };
+		CFBF643F1BD5587300725102 /* shader.h in Headers */ = {isa = PBXBuildFile; fileRef = CFBF64391BD5587300725102 /* shader.h */; settings = {ASSET_TAGS = (); }; };
+		CFBF64411BD5598800725102 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBF64401BD5598800725102 /* AppKit.framework */; };
+		CFBF64431BD559AE00725102 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBF64421BD559AE00725102 /* ScreenSaver.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CFBF64281BD5285C00725102 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "/Users/Astronaut/Library/Screen Savers";
+			dstSubfolderSpec = 0;
+			files = (
+				CFBF64291BD5288800725102 /* AcidSS.saver in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CFA391F71BD55C6700CC119F /* OpenGLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLRenderer.h; sourceTree = "<group>"; };
+		CFA391F81BD55C6700CC119F /* OpenGLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenGLRenderer.mm; sourceTree = "<group>"; };
+		CFA391FB1BD55E4D00CC119F /* glUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glUtil.h; sourceTree = "<group>"; };
 		CFBF641B1BD5244800725102 /* AcidSS.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcidSS.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBF641E1BD5244800725102 /* AcidSSView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcidSSView.h; sourceTree = "<group>"; };
-		CFBF64201BD5244800725102 /* AcidSSView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcidSSView.m; sourceTree = "<group>"; };
+		CFBF64201BD5244800725102 /* AcidSSView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AcidSSView.mm; sourceTree = "<group>"; };
 		CFBF64221BD5244800725102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFBF642C1BD552C200725102 /* MyOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOpenGLView.h; sourceTree = "<group>"; };
+		CFBF642D1BD552C200725102 /* MyOpenGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyOpenGLView.mm; sourceTree = "<group>"; };
+		CFBF64321BD554F500725102 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CFBF64341BD5587300725102 /* generator.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = generator.frag; sourceTree = "<group>"; };
+		CFBF64351BD5587300725102 /* plain.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = plain.vert; sourceTree = "<group>"; };
+		CFBF64361BD5587300725102 /* program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = program.cpp; sourceTree = "<group>"; };
+		CFBF64371BD5587300725102 /* program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = program.h; sourceTree = "<group>"; };
+		CFBF64381BD5587300725102 /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		CFBF64391BD5587300725102 /* shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader.h; sourceTree = "<group>"; };
+		CFBF64401BD5598800725102 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CFBF64421BD559AE00725102 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBF64431BD559AE00725102 /* ScreenSaver.framework in Frameworks */,
+				CFBF64411BD5598800725102 /* AppKit.framework in Frameworks */,
+				CFBF64331BD554F500725102 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +77,9 @@
 		CFBF64111BD5244800725102 = {
 			isa = PBXGroup;
 			children = (
+				CFBF64421BD559AE00725102 /* ScreenSaver.framework */,
+				CFBF64401BD5598800725102 /* AppKit.framework */,
+				CFBF64321BD554F500725102 /* OpenGL.framework */,
 				CFBF641D1BD5244800725102 /* AcidSS */,
 				CFBF641C1BD5244800725102 /* Products */,
 			);
@@ -48,11 +96,38 @@
 		CFBF641D1BD5244800725102 /* AcidSS */ = {
 			isa = PBXGroup;
 			children = (
+				CFC1CC251BD67BB2003EAF3F /* Shaders */,
+				CFC1CC241BD67BA3003EAF3F /* Utils */,
+				CFA391F71BD55C6700CC119F /* OpenGLRenderer.h */,
+				CFA391F81BD55C6700CC119F /* OpenGLRenderer.mm */,
+				CFBF642C1BD552C200725102 /* MyOpenGLView.h */,
+				CFBF642D1BD552C200725102 /* MyOpenGLView.mm */,
 				CFBF641E1BD5244800725102 /* AcidSSView.h */,
-				CFBF64201BD5244800725102 /* AcidSSView.m */,
+				CFBF64201BD5244800725102 /* AcidSSView.mm */,
 				CFBF64221BD5244800725102 /* Info.plist */,
 			);
 			path = AcidSS;
+			sourceTree = "<group>";
+		};
+		CFC1CC241BD67BA3003EAF3F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CFA391FB1BD55E4D00CC119F /* glUtil.h */,
+				CFBF64361BD5587300725102 /* program.cpp */,
+				CFBF64371BD5587300725102 /* program.h */,
+				CFBF64381BD5587300725102 /* shader.cpp */,
+				CFBF64391BD5587300725102 /* shader.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		CFC1CC251BD67BB2003EAF3F /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				CFBF64341BD5587300725102 /* generator.frag */,
+				CFBF64351BD5587300725102 /* plain.vert */,
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -62,7 +137,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBF64301BD552C200725102 /* MyOpenGLView.h in Headers */,
+				CFBF643F1BD5587300725102 /* shader.h in Headers */,
 				CFBF641F1BD5244800725102 /* AcidSSView.h in Headers */,
+				CFA391FC1BD55E4D00CC119F /* glUtil.h in Headers */,
+				CFBF643D1BD5587300725102 /* program.h in Headers */,
+				CFA391F91BD55C6700CC119F /* OpenGLRenderer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +157,7 @@
 				CFBF64171BD5244800725102 /* Frameworks */,
 				CFBF64181BD5244800725102 /* Headers */,
 				CFBF64191BD5244800725102 /* Resources */,
+				CFBF64281BD5285C00725102 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -123,6 +204,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBF643A1BD5587300725102 /* generator.frag in Resources */,
+				CFBF643B1BD5587300725102 /* plain.vert in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFBF64211BD5244800725102 /* AcidSSView.m in Sources */,
+				CFA391FA1BD55C6700CC119F /* OpenGLRenderer.mm in Sources */,
+				CFBF64211BD5244800725102 /* AcidSSView.mm in Sources */,
+				CFBF643C1BD5587300725102 /* program.cpp in Sources */,
+				CFBF643E1BD5587300725102 /* shader.cpp in Sources */,
+				CFBF64311BD552C200725102 /* MyOpenGLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +347,7 @@
 				CFBF64271BD5244800725102 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

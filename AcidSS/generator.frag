@@ -28,9 +28,10 @@ vec2 polar(vec2 dPoint)
     return vec2(sqrt(dPoint.x * dPoint.x + dPoint.y * dPoint.y), atan(dPoint.y, dPoint.x));
 }
 
-vec2 scaleImageNORM(float scale)
+vec2 bitcrashFragment(vec2 fragCoord, vec2 originalScreen, float downscale)
 {
-    return floor(gl_FragCoord.xy / scale);
+    vec2 halfScreen = originalScreen / 2;
+    return floor( (fragCoord - halfScreen) / downscale) + halfScreen / downscale;
 }
 
 float rand(vec2 co)
@@ -139,12 +140,12 @@ vec4 trackBPMDemo(float demoTimeSec, float bpm)
     
     for (float i = N; i > 1; i /= 2)
     {
-        value += rand(scaleImageNORM(i) * sin(time)) * (hsv2rgb(vec3(NORMSIN_HZ_T(0.25), 0.15, 0.75 + 0.25 * (i / scaledLogN))));
+        value += rand(bitcrashFragment(gl_FragCoord.xy, vec2(screenWidth, screenHeight), i) * sin(time)) * (hsv2rgb(vec3(NORMSIN_HZ_T(0.25), 0.15, 0.75 + 0.25 * (i / scaledLogN))));
     }
     value /= scaledLogN + noisePower;
     
     const float mergingFactor = 0.5;
-    return (0.75 + (0.25 * (1.0 - mainLFO)) + mergingFactor) * acidDemoHz(scaleImageNORM(acidDemoBitcrash), vec2(screenWidth, screenHeight) / acidDemoBitcrash, hzBpm / 2) - mergingFactor * vec4(value, 1.0);
+    return (0.75 + (0.25 * (1.0 - mainLFO)) + mergingFactor) * acidDemoHz(bitcrashFragment(gl_FragCoord.xy, vec2(screenWidth, screenHeight), acidDemoBitcrash), vec2(screenWidth, screenHeight) / acidDemoBitcrash, hzBpm / 2) - mergingFactor * vec4(value, 1.0);
 }
 
 void main()

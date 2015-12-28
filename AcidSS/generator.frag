@@ -54,7 +54,7 @@ vec4 acidDemoHz(vec2 fragPoint, vec2 screen, float hz)
     
     float halfWidth = 0.5 * viewPort.x;
     float halfHeight = 0.5 * viewPort.y;
-    vec2 fragmentPoint = fragPoint.xy / iResolution.xy * viewPort;
+    vec2 fragmentPoint = (fragPoint.xy + vec2(0.5, 0.5)) / iResolution.xy * viewPort;
     
     float phase = 2.0 * M_PI * iGlobalTime;
     float radius = halfHeight;
@@ -106,6 +106,8 @@ vec4 acidDemoHz(vec2 fragPoint, vec2 screen, float hz)
 
 vec4 trackBPMDemo(float demoTimeSec, float bpm)
 {
+    vec2 centeredFragPoint = gl_FragCoord.xy + vec2(0.5, 0.5);
+    
     const float fadeFromWhiteTime = 8.0;
     const float bitcrashFadeInTime = 2.0;
     
@@ -115,42 +117,57 @@ vec4 trackBPMDemo(float demoTimeSec, float bpm)
     float noiseHz = hzBpm / 32;
     float shiverHz = hzBpm / 16;
     
-    float shiverPhase = shiverHz * sin(M_2PI * time * shiverHz);
-    float shiver = NORMSIN(M_2PI * time * shiverPhase);
+    //float shiverPhase = shiverHz * sin(M_2PI * time * shiverHz);
+    // float shiver = NORMSIN(M_2PI * time * shiverPhase);
+    
+    float SHRange = 3.0;
+    float freqSH = rand(vec2(floor(time * shiverHz), M_PI));
+    float baseFreq = 10.0;
+    float shiverPhase = (1 + floor(freqSH * SHRange * 0.25)) * baseFreq;
+    
+    float minMod = 1.0;
+    float maxMod = 20.0;
+    float shiver = rand(vec2(floor(time * shiverPhase), -M_PI));
+    shiver *= shiver;
     
     const float bitcrashLowTreshold = 1.0;
     const float bitcrashHightTreshold = 100;
     float bitcrashRythm = NORMSIN_HZ_T_PH(bitcrashHz * clamp(-1.0 + time / bitcrashFadeInTime, 0.0, 1.0), -M_PI_2);
-    float acidDemoBitcrash = (0.125 * mainLFO * bitcrashHightTreshold + bitcrashLowTreshold) + (bitcrashHightTreshold - bitcrashLowTreshold) * (mainLFO * bitcrashRythm * shiver);
+    float acidDemoBitcrash = (0.125 * mainLFO * bitcrashHightTreshold + bitcrashLowTreshold) + (bitcrashHightTreshold - bitcrashLowTreshold) * (mainLFO * shiver);
     
-    const float noiseFadeFromWhitePower = 3.0;
-    const float noiseLowTreshold = 1.0;
-    const float noiseHightTreshold = 20.0;
+    const float noiseFadeFromWhitePower = 0.0;
+    const float noiseLowTreshold = 0.0;
+    const float noiseHightTreshold = 1.0;
     float fading = clamp(-1.0 + time / fadeFromWhiteTime, 0.0, 1.0);
     float noiseRythm = mix(shiver, NORMSIN_HZ_T_PH(noiseHz, M_PI_2) * mainLFO * fading, 0.75) * 0.5;
-    float noisePower = mix(noiseLowTreshold, noiseHightTreshold, noiseRythm) - noiseFadeFromWhitePower * (1.0 - fading);
+    float noisePower = mix(noiseLowTreshold, noiseHightTreshold, noiseRythm) - noiseFadeFromWhitePower;// * (1.0 - fading);
     
-    vec2 point = gl_FragCoord.xy / vec2(screenWidth, screenHeight);
     vec3 value = vec3(0.0, 0.0, 0.0);
+    vec2 screen = vec2(screenWidth, screenHeight);
+    float radialFade = length((gl_FragCoord.xy - vec2(0.5, 0.5)) - screen / 2) / length(screen / 2);
+    radialFade *= radialFade;
     
-    float powMod = 4.0 + floor(4.0 * rand(vec2(floor(time / shiverPhase), M_PI)) * mainLFO);
+    float powMod = 6.0 + floor(2.0 * rand(vec2(floor(time / shiverPhase), M_PI)));
     const float log2value = log(2.0);
     float N = pow(2, powMod);
     float scaledLogN = (powMod * log2value);
     
     for (float i = N; i > 1; i /= 2)
     {
-        value += rand(bitcrashFragment(gl_FragCoord.xy, vec2(screenWidth, screenHeight), i) * sin(time)) * (hsv2rgb(vec3(NORMSIN_HZ_T(0.25), 0.15, 0.75 + 0.25 * (i / scaledLogN))));
+        value += (rand((bitcrashFragment(gl_FragCoord.xy, vec2(screenWidth, screenHeight), i) + vec2(0.5, 0.5)) * sin(time)) * (hsv2rgb(vec3(NORMSIN_HZ_T(0.25), 0.15, 0.75 + 0.25 * (i / scaledLogN))) * 1.0 * radialFade) - 0.0);
     }
-    value /= scaledLogN + noisePower;
+    value /= scaledLogN + abs(noisePower);
     
-    const float mergingFactor = 0.5;
-    return (0.75 + (0.25 * (1.0 - mainLFO)) + mergingFactor) * acidDemoHz(bitcrashFragment(gl_FragCoord.xy, vec2(screenWidth, screenHeight), acidDemoBitcrash), vec2(screenWidth, screenHeight) / acidDemoBitcrash, hzBpm / 2) - mergingFactor * vec4(value, 1.0);
+    //return vec4(value, 1.0);
+    const float mergingFactor = 0.7;
+    vec4 acidD = acidDemoHz(bitcrashFragment(gl_FragCoord.xy, vec2(screenWidth, screenHeight), acidDemoBitcrash), vec2(screenWidth, screenHeight) / acidDemoBitcrash, hzBpm / 2);
+    //return (0.75 + (0.25 * (1.0 - mainLFO)) + mergingFactor) * acidD - mergingFactor * vec4(value, 1.0);
+    return sqrt(acidD) - vec4(value * value, 1.0);
 }
 
 void main()
 {
     const float bpm = 180;
-    const float time = 60 * 5;
+    const float time = 3 * 5;
     color = trackBPMDemo(time, bpm);
 }

@@ -48,7 +48,10 @@ vec3 hsv2rgb(vec3 c)
 
 vec4 acidDemoHz(vec2 fragPoint, vec2 screen, float hz)
 {
-    vec2 viewPort = vec2(1920.0, 1080.0);
+    const float viewPortH = 1080.0;
+    float viewPortW = viewPortH * screen.x / screen.y;
+    vec2 viewPort = vec2(viewPortW, viewPortH);
+    
     float iGlobalTime = time;
     vec2 iResolution = screen;
     
@@ -168,6 +171,6 @@ vec4 trackBPMDemo(float demoTimeSec, float bpm)
 void main()
 {
     const float bpm = 180;
-    const float time = 3 * 5;
+    const float time = 60 * 5;
     color = trackBPMDemo(time, bpm);
 }
